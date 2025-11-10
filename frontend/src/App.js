@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import TrackOrder from './pages/TrackOrder';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 import './styles/main.css';
 
 function App() {
@@ -15,8 +18,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:productId" element={<Checkout />} />
           <Route path="/track-order" element={<TrackOrder />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
